@@ -45,9 +45,6 @@ const RecipeItemWrapper = styled.section`
     margin: 0.95em 0 1.2em;
     padding: 0.2em;
   }
-  img {
-    max-width: 400px;
-  }
 `
 
 const RecipeTemplate = ({ data }) => {
@@ -90,7 +87,7 @@ export const query = graphql`
       id
       summary
       name
-      # link
+      link
       localImage {
         childImageSharp {
           fluid {
