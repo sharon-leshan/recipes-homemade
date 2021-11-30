@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import {graphql, Link} from "gatsby"
-import Image from "gatsby-image";
-import {Disqus} from "gatsby-plugin-disqus"
+import { graphql, Link } from "gatsby"
+import Image from "gatsby-image"
+import { Disqus } from "gatsby-plugin-disqus"
 
-const RecipeTemplateWrapper = styled.section`
+const RecipeItemWrapper = styled.section`
   width: 100vw;
   margin: 4rem auto;
   padding: 2rem;
@@ -51,12 +51,12 @@ const RecipeTemplateWrapper = styled.section`
 `
 
 const RecipeTemplate = ({ data }) => {
-  const url = "https-maleo-recipes-homemade-netlify-app/recipe/";
-  const blogIdentity = data.recipe.id;
+  const url = "https-maleo-recipes-homemade-netlify-app/recipe/"
+  const blogIdentity = data.recipe.id
   let disqusConfig = {
     url: `${url}${blogIdentity}`,
     identifier: blogIdentity,
-    title: data.recipe.name
+    title: data.recipe.name,
   }
 
   return (
@@ -67,43 +67,43 @@ const RecipeTemplate = ({ data }) => {
       <div className="info">
         <h1>{data.recipe.name} </h1>
         <h4>{data.recipe.cook.name}</h4>
-        <Image fluid={data.recipe.localImage.childImageSharp.fluid}/>
+        <Image fluid={data.recipe.localImage.childImageSharp.fluid} />
         <p>{data.recipe.summary} </p>
         {data.recipe.link && (
           <a
-          href={pageContext.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="link"
-        >
-          Youtube
-        </a>
+            href={data.recipe.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link"
+          >
+            Youtube
+          </a>
         )}
       </div>
-      <Disqus config={disqusConfig}/>
+      <Disqus config={disqusConfig} />
     </RecipeItemWrapper>
   )
 }
 export const query = graphql`
-  query RecipeQuery($recipeId: String!){
-    recipe(id: {eq: $recipeId}){
+  query RecipeQuery($recipeId: String!) {
+    recipe(id: { eq: $recipeId }) {
       id
       summary
       name
       # link
-      # localImage{
-      #   childImageSharp{
-      #     fluid{
-      #       ...GatsbyImageSharpFluid_withWebp
-      #     }
-      #   }
-      # }
+      localImage {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
       cook {
         id
         name
       }
     }
   }
-`;
+`
 
 export default RecipeTemplate
