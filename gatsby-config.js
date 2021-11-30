@@ -17,6 +17,7 @@ module.exports = {
             map: doc => ({
               name: doc.name,
               summary: doc.summary,
+              link: doc.link,
               imageUrl: doc.imageUrl,
               cook___NODE: doc.cook.id,
             }),
