@@ -50,12 +50,6 @@ const AllRecipes = styled.section`
       color: white;
     }
   }
-  .image {
-    max-width: 360px;
-    img {
-      max-width: 360px;
-    }
-  }
   @media (min-width: 776px) {
     .card {
       display: grid;
@@ -115,7 +109,7 @@ export const query = graphql`
       edges {
         node {
           id
-          # link
+          link
           localImage {
             childImageSharp {
               fluid {
