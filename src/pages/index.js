@@ -82,8 +82,8 @@ const AllRecipes = styled.section`
 `
 
 const IndexPage = props => {
-  const summarySlice = (str) => {
-    return str.slice(0,100) + "...";
+  const summarySlice = str => {
+    return str.slice(0, 100) + "..."
   }
   return (
     <Layout>
@@ -92,7 +92,7 @@ const IndexPage = props => {
         {props.data.allRecipe.edges.map(edge => (
           <article className="card" key={edge.node.id}>
             <div className="image">
-              {/* <Image fluid={edge.node.localImage.childImageSharp.fluid} /> */}
+              <Image fluid={edge.node.localImage.childImageSharp.fluid} />
             </div>
             <div className="info">
               <h2>{edge.node.name}</h2>
@@ -116,13 +116,13 @@ export const query = graphql`
         node {
           id
           # link
-          # localImage {
-          #   childImageSharp {
-          #     fluid {
-          #       ...GatsbyImageSharpFluid_withWebp
-          #     }
-          #   }
-          # }
+          localImage {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
           name
           summary
           cook {
