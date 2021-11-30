@@ -7,8 +7,10 @@ exports.createPages = ({ graphql, actions }) => {
   return graphql(`
     {
       allRecipe {
-        node {
-          id
+        edges {
+          node {
+            id
+          }
         }
       }
     }
