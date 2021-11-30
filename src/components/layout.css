@@ -6,8 +6,8 @@
 }
 
 :root {
-  --mainGrey: #F9F9FA;
-  --mainBlack: #0A0A0A;
+  --mainGrey: #f9f9fa;
+  --mainBlack: #0a0a0a;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 4px;
 }
