@@ -16,5 +16,4 @@ body {
   background: var(--mainGrey);
   color: var(--mainBlack);
   font-size: 18px;
-  overflow: hidden;
 }
