@@ -48,7 +48,7 @@ const RecipeItemWrapper = styled.section`
 `
 
 const RecipeTemplate = ({ data }) => {
-  const url = "https-maleo-recipes-homemade-netlify-app/recipe/"
+  const url = "https://maleo-recipes-homemade-netlify-app/recipe/"
   const blogIdentity = data.recipe.id
   let disqusConfig = {
     url: `${url}${blogIdentity}`,
