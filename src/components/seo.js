@@ -77,6 +77,7 @@ Seo.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
+  author:'@shazyleshan'
 }
 
 Seo.propTypes = {
