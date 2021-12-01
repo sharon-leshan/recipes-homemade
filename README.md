@@ -4,6 +4,7 @@
 [![recipe10.png](https://i.postimg.cc/nL0TB9R5/recipe10.png)]
 [![recipe11.png](https://i.postimg.cc/3xjtrcg3/recipe11.png)]
 [![recipe1.png](https://i.postimg.cc/Cxyndrm6/recipe1.png)]
+[![recipe2.png](https://i.postimg.cc/0Q5wP6ck/recipe2.png)]
 ## Techologies
 - React
 - Firebase
