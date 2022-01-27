@@ -6,7 +6,7 @@
 
 
 ## Techologies
-- React
+- Reactjs
 - Firebase
 - Node
 - Gatsby
