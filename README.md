@@ -8,7 +8,7 @@
 ## Techologies
 - Reactjs
 - Firebase
-- Node
+- Nodejs
 - Gatsby
 - GraphQL
 - Disqus
